@@ -10,7 +10,7 @@ function bot(a){
 
     function ask(){
         let answer = +prompt('Угадай число от 1 до 100');
-        if (!isNumber(answer)) {
+        if (!isNumber(answer) || answer === 0) {
             alert('Введи число!');
             ask();
         }
@@ -25,12 +25,12 @@ function bot(a){
     if (attempts !== 0){
     if (PersonNumber === 0 || PersonNumber === null) return alert('Игра окончена!');
     else if (PersonNumber > number) {
-        alert('Загаданное число больше, осталось попыток: ' + attempts);
+        alert('Загаданное число меньше, осталось попыток: ' + attempts);
         return bot(attempts--);
        
     }
     else if (PersonNumber < number){
-        alert('Загаданное число меньше, осталось попыток: ' + attempts);
+        alert('Загаданное число больше, осталось попыток: ' + attempts);
         attempts--;
         return bot(attempts--);
        
