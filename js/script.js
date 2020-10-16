@@ -1,5 +1,4 @@
 'use strict';
-const number = 50;
 
 let isNumber = function (n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
